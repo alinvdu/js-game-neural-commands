@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three JS BCI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tryingToConnect">
+      <h2 id="train">Trying connection</h2>
+    </div>
+    <div id="menu" class="menu-style">
+      <h2 id="train">Train</h2>
+      <h2 id="play">Play</h2>
+    </div>
+    <div id="training" class="menu-style">
+      <h2 id="walking">Walking</h2>
+      <h2 id="idle">Idle</h2>
+      <h2 id="back">Back</h2>
+    </div>
+    <div id="walkingTrainHelper" class="helperText">
+      <h2>
+        Focus reaching the blue oval and imagine walking.<br />Your training
+        will last 8 seconds
+      </h2>
+    </div>
+    <div id="goodJob" class="helperText">
+      <h2>Good job!</h2>
+    </div>
+    <div id="idleTrainHelper" class="helperText">
+      <h2>Clear your mind and relax for 8 seconds</h2>
+    </div>
+    <div id="trainingFailed" class="helperText">
+      <h2>Training failed! Check headset and try again</h2>
+    </div>
+    <div id="saveOrDiscard" class="menu-style">
+      <h2>Save training?</h2>
+      <h2 id="YES">YES</h2>
+      <h2 id="NO">NO</h2>
+    </div>
+    <canvas class="webgl"></canvas>
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.124.0/build/three.module.js",
+          "gltfloader": "https://unpkg.com/three@0.124.0/examples/jsm/loaders/GLTFLoader.js",
+          "orbitcontrols": "https://unpkg.com/three@0.124.0/examples/jsm/controls/OrbitControls.js"
+        }
+      }
+    </script>
+    <script type="module" src="virtual/virtual.js"></script>
+  </body>
+</html>
